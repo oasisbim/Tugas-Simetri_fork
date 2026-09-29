@@ -6,19 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script> 
+        tailwind.config = { 
+            theme: { 
+                extend: { 
+                    fontFamily: { 
+                        zelda: ['"The Wild Breath of Zelda"', 'sans-serif'], 
+                    } 
+                } 
+            } 
+        }                     
+    </script>
+
+    <style> 
+        @font-face { 
+            font-family: 'The Wild Breath of Zelda'; 
+            src: url('./font/The Wild Breath of Zelda.otf') format('opentype'); 
+            font-weight: 400; 
+            font-style: normal; } 
+    </style>
 </head>
 
-<body class="bg-gray-100">
-    <nav class="bg-white-100 px-10 py-4 shadow-md bg-[#7A3D21]">
+<body class="bg-gray-100 font-zelda">
+    <nav class="px-10 py-4 shadow-md bg-[#7A3D21]">
         <div class="mx-auto flex items-center justify-between">
 
             <div class="flex items-center space-x-5">
                 <img src="images/logo-simetri.png" alt="Logo Simetri" class="h-20 w-auto" />
                 <div class="flex items-center space-x-3">
-                    <span class="text-[#F9DCB4] font-zelda">HOME</span>
-                    <span class="text-[#C07E4E]">TEMA</span>
-                    <span class="text-[#C07E4E]">MATERI</span>
-                    <span class="text-[#C07E4E]">ASIK</span>
+                    <span class="text-[#F9DCB4]">Home</span>
+                    <span class="text-[#C07E4E]">Tema</span>
+                    <span class="text-[#C07E4E]">Materi</span>
+                    <span class="text-[#C07E4E]">Asik</span>
                 </div>
             </div>
 
