@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> 
+        tailwind.config = { 
+            theme: { 
+                extend: { 
+                    fontFamily: { 
+                        zelda: ['"zelda"', 'sans-serif'], 
+                    } 
+                } 
+            } 
+        }                     
+    </script>
+
+    <style> 
+        @font-face { 
+            font-family: 'zelda'; 
+            src: url('./font/zelda.otf') format('opentype'); 
+            font-weight: 400; 
+            font-style: normal; } 
+    </style>
+</head>
+
+<body class="bg-gray-100 font-zelda">
+    <nav class="px-10 py-4 shadow-md bg-[#7A3D21]">
+        <div class="mx-auto flex items-center justify-between">
+
+            <div class="flex items-center space-x-5">
+                <img src="images/logo-simetri.png" alt="Logo Simetri" class="h-20 w-auto" />
+                <div class="flex items-center space-x-3">
+                    <span class="text-[#C07E4E]">Home</span>
+                    <span class="text-[#C07E4E]">Tema</span>
+                    <span class="text-[#F9DCB4]">Materi</span>
+                    <span class="text-[#C07E4E]">Asik</span>
+                </div>
+            </div>
+
+            <div class="flex space-x-5">
+                <div class="flex items-center space-x-3">
+                    <img src="images/Exclude.png" alt="Twitter" class="h-10 w-auto" />
+
+                </div>
+
+                 <div class="flex items-center space-x-3">
+                    <img src="images/Tiktok.png" alt="Tiktok" class="h-10 w-auto" />
+
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <img src="images/ig-logo.png" alt="Instagram" class="h-10 w-auto" />
+
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <img src="images/yt-logo.png" alt="YouTube" class="h-10 w-auto" />
+
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>
