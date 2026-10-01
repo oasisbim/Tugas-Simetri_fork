@@ -59,11 +59,17 @@
     <main>
         
         <section>
-            <div class="relative">
-                <img src="images/materi/bg-hero.svg" alt="hero" class="w-full h-full object-cover">
+            <div class="relative overflow-hidden">
+                <img src="images/materi/bg-hero.svg" alt="hero" class="block w-full h-auto">
             
-                <div class="absolute left-1/2 top-1/2 m-0 -translate-x-1/2 -translate-y-1/2 text-center text-4xl text-white">
-                    <h1>WHAT YOU WILL LEARN</h1>
+                <div class="absolute inset-0 flex flex-col justify-center items-center">
+                    <h1 class="text-white text-[clamp(1.5rem,7vw,6rem)]">WHAT YOU WILL LEARN</h1>
+
+                    <div class="items-center">
+                        <img class="w-3vw" src="images/materi/wood-hero.png" alt="wood">
+                    </div>
+
+                    <button class="bg-blu-400">ACCES MODUL</button>
                 </div>
             </div>
         </section>
