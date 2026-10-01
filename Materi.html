@@ -27,37 +27,65 @@
     </style>
 </head>
 
-<body class="bg-gray-100 font-zelda">
-    <header class="sticky top-0">
-        <nav class="flex items-center justify-between bg-[#7A3D21] px-[90px] h-[90px]">
-            <div class="flex items-center gap-16">
-                <img img src="images/navbar/logo-simetri.png" alt="Logo Simetri" class="h-20 w-auto">
-                <ul class="flex items-center gap-16 text-[32px] text-white">
-                    <li><a href="" class="text-[#aa5a34]">Home</a></li>
-                    <li><a href="" class="text-[#aa5a34] hover:text-[#F9DCB4]">Tema</a></li>
-                    <li><a href="" class="underline text-[#F9DCB4] hover:text-[#F9DCB4]">Materi</a></li>
-                    <li><a href="" class="text-[#aa5a34] hover:text-[#F9DCB4]">Asik</a></li>
+<body class="font-zelda">
+    <header class="border-b-[6px] border-[#4C1C0E]">
+        <nav class="flex items-center justify-between bg-[#7A3D21] px-6 md:px-16 h-[90px]">
+            <div class="flex items-center gap-12 lg:gap-16">
+                <img src="images/navbar/logo-simetri.png" alt="Logo Simetri" class="h-[92.72998046875px] lg:h-[132.78564453125px] w-auto">
+                <ul class="hidden md:flex items-center gap-10 lg:gap-14 text-2xl lg:text-[32px] text-[#C07E4E]">
+                   <li><a href="#" class="hover:text-[#F9DCB4] transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-[#F9DCB4] transition-colors">Tema</a></li>
+                    <li><a href="#" class="underline underline-offset-8 text-[#F9DCB4]">Materi</a></li>
+                    <li><a href="#" class="hover:text-[#F9DCB4] transition-colors">Asik</a></li>
                 </ul>
             </div>
-            <div class="flex items-center gap-2.5">
-                <a href="https://x.com/HMSI_ITS?s=20">
-                    <img src="images/navbar/Exclude.png" alt="Twitter" class="h-10 w-auto">
+
+            <div class="hidden md:flex items-center gap-3 lg:gap-4">
+                <a href="https://x.com/HMSI_ITS?s=20" target="_blank">
+                    <img src="images/navbar/twitter-logo.png" alt="Twitter" class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
                 </a>
-                <a href="https://www.tiktok.com/@hmsi_its">
-                    <img src="images/navbar/Tiktok.png" alt="Tiktok" class="h-10 w-auto" >
+                <a href="https://www.tiktok.com/@hmsi_its" target="_blank">
+                    <img src="images/navbar/Tiktok.png" alt="Tiktok" class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
                 </a>
-                <a href="https://www.instagram.com/hmsi_its/">
-                    <img src="images/navbar/ig-logo.png" alt="Instagram" class="h-10 w-auto" >
+                <a href="https://www.instagram.com/hmsi_its/" target="_blank">
+                    <img src="images/navbar/ig-logo.png" alt="Instagram" class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
                 </a>
-                <a href="https://www.youtube.com/@layarHMSI">
-                    <img src="images/navbar/yt-logo.png" alt="Youtube" class="h-10 w-auto">
+                <a href="https://www.youtube.com/@layarHMSI" target="_blank">
+                    <img src="images/navbar/yt-logo.png" alt="Youtube" class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
                 </a>
             </div>
+
+            <button id="menu-btn" class="md:hidden bg-[#4C1C0E] rounded-xl flex justify-center items-center w-12 h-12">
+                <img id="menu-icon" src="images/navbar/hamburger-menu.svg" alt="Menu" class="w-6 h-auto">
+            </button>
         </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F6EBD7] shadow-xl text-center">
+            <ul class="flex flex-col text-2xl text-[#C07E4E] gap-[10px] text-[32px]">
+                <li class="py-4"><a href="#">Home</a></li>
+                <li class="py-4"><a href="#">Tema</a></li>
+                <li class="py-4 bg-[#F9DCB4]"><a href="#" class="underline underline-offset-8 text-[#7A3D21]">Materi</a></li>
+                <li class="py-4"><a href="#">Asik</a></li>
+            </ul>
+
+            <div class="flex justify-center items-center gap-[15px] py-4">
+                <a href="https://x.com/HMSI_ITS?s=20" target="_blank" rel="noopener noreferrer">
+                    <img src="images/navbar/twitter-dark.svg" alt="Twitter" class="h-10 w-auto">
+                </a>
+                <a href="https://www.tiktok.com/@hmsi_its" target="_blank" rel="noopener noreferrer">
+                    <img src="images/navbar/Tiktok-dark.svg" alt="Tiktok" class="h-10 w-auto">
+                </a>
+                <a href="https://www.instagram.com/hmsi_its/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/navbar/ig-logo-dark.svg" alt="Instagram" class="h-10 w-auto">
+                </a>
+                <a href="https://www.youtube.com/@layarHMSI" target="_blank" rel="noopener noreferrer">
+                    <img src="images/navbar/yt-logo-dark.svg" alt="Youtube" class="h-10 w-auto">
+                </a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        
+    <main> 
         <section>
             <div class="relative overflow-hidden">
                 <img src="images/materi/bg-hero.svg" alt="hero" class="block w-full h-auto">
@@ -101,6 +129,25 @@
         </section>
 
     </main>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        const hamburgerSrc = 'images/navbar/hamburger-menu.svg';
+        const closeSrc = 'images/navbar/x-icon.svg';
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            
+            if (isHidden) {
+                menuIcon.src = hamburgerSrc;
+            } else {
+                menuIcon.src = closeSrc;
+            }
+        });
+    </script>
 </body>
 
 </html>
