@@ -19,25 +19,65 @@
         }
     </script>
 
-    <style> 
+    <style>  
         @font-face { 
             font-family: 'zelda'; 
             src: url('./font/zelda.otf') format('opentype'); 
             font-weight: 400; 
-            font-style: normal; } 
+            font-style: normal; 
+        } 
+        @font-face { 
+            font-family: 'baskerville'; 
+            src: url('./font/baskerville.ttf') format('truetype'); 
+            font-weight: 400; 
+            font-style: normal;
+        } 
+
+    .button {
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 3cqw;             
+        padding: 0.3em 0.8em;
+        border-radius: 0.4em;
+        background: linear-gradient(to bottom, #FA7F3E 50%, #F58B40 50%);
+        border: 1px solid #FFB25B;
+        color: white;
+        text-shadow: 0 0.08em 0 #7A3D21;
+        box-shadow: 0 0 0 0.1em #6B2E1A, 0 0.3em 0 0.1em #6B2E1A;
+    }
     </style>
 </head>
 
 <body class="bg-gray-100 font-zelda">
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        const hamburgerSrc = 'images/navbar/hamburger-menu.svg';
+        const closeSrc = 'images/navbar/x-icon.svg';
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+
+            if (isHidden) {
+                menuIcon.src = hamburgerSrc;
+            } else {
+                menuIcon.src = closeSrc;
+            }
+        });
+    </script>
+
     <header class="sticky top-0">
-        <nav class="flex items-center justify-between bg-[#7A3D21] px-[90px] h-[90px]">
-            <div class="flex items-center gap-16">
-                <img img src="images/navbar/logo-simetri.png" alt="Logo Simetri" class="h-20 w-auto">
-                <ul class="flex items-center gap-16 text-[32px] text-white">
-                    <li><a href="" class="text-[#aa5a34]">Home</a></li>
-                    <li><a href="" class="text-[#aa5a34] hover:text-[#F9DCB4]">Tema</a></li>
-                    <li><a href="" class="underline text-[#F9DCB4] hover:text-[#F9DCB4]">Materi</a></li>
-                    <li><a href="" class="text-[#aa5a34] hover:text-[#F9DCB4]">Asik</a></li>
+        <nav class="flex items-center justify-between bg-[#7A3D21] px-6 md:px-16 h-[90px]">
+            <div class="flex items-center gap-12 lg:gap-16">
+                <img src="images/navbar/logo-simetri.png" alt="Logo Simetri" class="h-[92.72998046875px] lg:h-[132.78564453125px] w-auto">
+                <ul class="hidden md:flex items-center gap-10 lg:gap-14 text-2xl lg:text-[32px] text-[#C07E4E]">
+                    <li><a href="#" class="hover:text-[#F9DCB4] transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-[#F9DCB4] transition-colors">Tema</a></li>
+                    <li><a href="#" class="underline underline-offset-8 text-[#F9DCB4]">Materi</a></li>
+                    <li><a href="#" class="hover:text-[#F9DCB4] transition-colors">Asik</a></li>
                 </ul>
             </div>
 
@@ -86,7 +126,7 @@
         </div>
     </header>
 
-    <main> 
+    <main>
         <section>
             <div class="relative overflow-hidden">
                 <img src="images/materi/bg-hero.svg" alt="hero" class="block w-full h-auto">
@@ -103,7 +143,7 @@
                     </div>
 
                     <a href="https://drive.google.com/drive/folders/1TkwIuBJVa_2qAAn-PETQ8rFqpkqygu3P?usp=drive_link" target="_blank">
-                        <button class="button text-[1.5vw] hover:bg-[image:linear-gradient(to_bottom,#ee915f_50%,#e38c4e_50%)]">ACCES MODUL</button>
+                        <button class="button text-[1.5vw] hover:bg-[linear-gradient(to_bottom,#ee915f_50%,#e38c4e_50%)]">ACCES MODUL</button>
                     </a>
                 </div>
             </div>
