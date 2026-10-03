@@ -6,73 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materi</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script> 
-        tailwind.config = { 
-            theme: { 
-                extend: { 
-                    fontFamily: { 
-                        zelda: ['"zelda"', 'sans-serif'], 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        zelda: ['"zelda"', 'sans-serif'],
                         baskerville: ['"baskerville"', 'sans-serif']
-                    } 
-                } 
-            } 
+                    }
+                }
+            }
         }
     </script>
 
-    <style>  
-        @font-face { 
-            font-family: 'zelda'; 
-            src: url('./font/zelda.otf') format('opentype'); 
-            font-weight: 400; 
-            font-style: normal; 
-        } 
-        @font-face { 
-            font-family: 'baskerville'; 
-            src: url('./font/baskerville.ttf') format('truetype'); 
-            font-weight: 400; 
+    <style>
+        @font-face {
+            font-family: 'zelda';
+            src: url('./font/zelda.otf') format('opentype');
+            font-weight: 400;
             font-style: normal;
-        } 
+        }
 
-    .button {
-        display: inline-block;
-        white-space: nowrap;
-        font-size: 3cqw;
-        padding: 0.3em 0.8em;
-        border-radius: 0.4em;
-        background: linear-gradient(to bottom, #FA7F3E 50%, #F58B40 50%);
-        border: 1px solid #FFB25B;
-        color: white;
-        text-shadow: 0 0.08em 0 #7A3D21;
-        box-shadow: 0 0 0 0.1em #6B2E1A, 0 0.3em 0 0.1em #6B2E1A;
-    }
+        @font-face {
+            font-family: 'baskerville';
+            src: url('./font/baskerville.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .button {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 3cqw;
+            padding: 0.3em 0.8em;
+            border-radius: 0.4em;
+            background: linear-gradient(to bottom, #FA7F3E 50%, #F58B40 50%);
+            border: 1px solid #FFB25B;
+            color: white;
+            text-shadow: 0 0.08em 0 #7A3D21;
+            box-shadow: 0 0 0 0.1em #6B2E1A, 0 0.3em 0 0.1em #6B2E1A;
+        }
     </style>
 </head>
 
 <body class="bg-gray-100 font-zelda">
-
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const menuIcon = document.getElementById('menu-icon');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        const hamburgerSrc = 'images/navbar/hamburger-menu.svg';
-        const closeSrc = 'images/navbar/x-icon.svg';
-
-        menuBtn.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.toggle('hidden');
-
-            if (isHidden) {
-                menuIcon.src = hamburgerSrc;
-            } else {
-                menuIcon.src = closeSrc;
-            }
-        });
-    </script>
-
     <header class="sticky top-0">
         <nav class="flex items-center justify-between bg-[#7A3D21] px-6 md:px-16 h-[90px]">
             <div class="flex items-center gap-12 lg:gap-16">
-                <img src="images/navbar/logo-simetri.png" alt="Logo Simetri" class="h-[92.72998046875px] lg:h-[132.78564453125px] w-auto">
+                <img src="images/navbar/logo-simetri.png" alt="Logo Simetri"
+                    class="h-[92.72998046875px] lg:h-[132.78564453125px] w-auto">
                 <ul class="hidden md:flex items-center gap-10 lg:gap-14 text-2xl lg:text-[32px] text-[#C07E4E]">
                     <li><a href="#" class="hover:text-[#F9DCB4] transition-colors">Home</a></li>
                     <li><a href="#" class="hover:text-[#F9DCB4] transition-colors">Tema</a></li>
@@ -83,16 +65,20 @@
 
             <div class="hidden md:flex items-center gap-3 lg:gap-4">
                 <a href="https://x.com/HMSI_ITS?s=20" target="_blank">
-                    <img src="images/navbar/twitter-logo.png" alt="Twitter" class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
+                    <img src="images/navbar/twitter-logo.png" alt="Twitter"
+                        class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
                 </a>
                 <a href="https://www.tiktok.com/@hmsi_its" target="_blank">
-                    <img src="images/navbar/Tiktok.png" alt="Tiktok" class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
+                    <img src="images/navbar/Tiktok.png" alt="Tiktok"
+                        class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
                 </a>
                 <a href="https://www.instagram.com/hmsi_its/" target="_blank">
-                    <img src="images/navbar/ig-logo.png" alt="Instagram" class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
+                    <img src="images/navbar/ig-logo.png" alt="Instagram"
+                        class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
                 </a>
                 <a href="https://www.youtube.com/@layarHMSI" target="_blank">
-                    <img src="images/navbar/yt-logo.png" alt="Youtube" class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
+                    <img src="images/navbar/yt-logo.png" alt="Youtube"
+                        class="h-9 lg:h-10 w-auto hover:opacity-85 transition-opacity">
                 </a>
             </div>
 
@@ -105,7 +91,8 @@
             <ul class="flex flex-col text-2xl text-[#C07E4E] gap-[10px] text-[32px]">
                 <li class="py-4"><a href="#">Home</a></li>
                 <li class="py-4"><a href="#">Tema</a></li>
-                <li class="py-4 bg-[#F9DCB4]"><a href="#" class="underline underline-offset-8 text-[#7A3D21]">Materi</a></li>
+                <li class="py-4 bg-[#F9DCB4]"><a href="#" class="underline underline-offset-8 text-[#7A3D21]">Materi</a>
+                </li>
                 <li class="py-4"><a href="#">Asik</a></li>
             </ul>
 
@@ -127,39 +114,56 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section>
             <div class="relative">
-                <img src="images/materi/bg-hero.svg" alt="hero" class="block w-full h-[130vw] object-cover object-center md:h-auto">
-            
+                <img src="images/materi/bg-hero.svg" alt="hero"
+                    class="block w-full h-[130vw] object-cover object-center md:h-auto">
+
                 <div class="absolute inset-0 flex flex-col justify-center items-center md:justify-center md:pt-0">
-                    <h1 class="text-white text-[10vw] md:text-[5vw] [-webkit-text-stroke:0.04em_#7A3D21] [paint-order:stroke_fill] [text-shadow:0_5px_0_#7A3D21]">WHAT YOU WILL LEARN</h1>
+                    <h1
+                        class="text-white text-[10vw] md:text-[5vw] [-webkit-text-stroke:0.04em_#7A3D21] [paint-order:stroke_fill] [text-shadow:0_5px_0_#7A3D21]">
+                        WHAT YOU WILL LEARN</h1>
 
                     <div class="wood relative">
                         <img class="w-[92vw] md:w-[50vw]" src="images/materi/wood-hero.png" alt="wood">
-                        <div class="wood-content text-white absolute inset-0 text-center mt-[1.2vw] text-[1.8vw] font-serif">
-                            <p class="text-[3vw] md:text-[1.5vw] mt-[1vw] md:mt-0">Four days of real learning, real building, and walking away</p>
+                        <div
+                            class="wood-content text-white absolute inset-0 text-center mt-[1.2vw] text-[1.8vw] font-serif">
+                            <p class="text-[3vw] md:text-[1.5vw] mt-[1vw] md:mt-0">Four days of real learning, real
+                                building, and walking away</p>
                             <p class="text-[3vw] md:text-[1.5vw]">with something you actually made</p>
                         </div>
                     </div>
 
-                    <a href="https://drive.google.com/drive/folders/1TkwIuBJVa_2qAAn-PETQ8rFqpkqygu3P?usp=drive_link" target="_blank">
-                        <button class="button mt-[0.5vw] text-[3.5vw] md:text-[1.5vw] hover:bg-[linear-gradient(to_bottom,#ee915f_50%,#e38c4e_50%)]">ACCES MODUL</button>
+                    <a href="https://drive.google.com/drive/folders/1TkwIuBJVa_2qAAn-PETQ8rFqpkqygu3P?usp=drive_link"
+                        target="_blank">
+                        <button
+                            class="button mt-[0.5vw] text-[3.5vw] md:text-[1.5vw] hover:bg-[linear-gradient(to_bottom,#ee915f_50%,#e38c4e_50%)]">ACCES
+                            MODUL</button>
                     </a>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section class="relative">
-            <img src="images/materi/bg-about.svg" alt="about" class="block w-full h-[180vw] object-cover object-center md:h-auto">
-            <div class="absolute left-1/2 top-[60%] md:top-[55%] -translate-x-1/2 -translate-y-1/2 w-[100%]  md:w-[80%]">
+            <div class="overflow-hidden">
+                <img src="images/materi/bg-about.svg" alt="about"
+                    class="md:w-full scale-[210%] md:scale-[100%] my-[150px] md:my-0 object-cover">
+            </div>
+            <div class="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 w-[100%]  md:w-[80%]">
                 <img src="images/materi/paper-about.png" alt="about" class="object-cover hidden md:block">
-                <img src="images/materi/paper-about-mobile.png" alt="about" class="object-cover block md:hidden h-[100%]">
+                <img src="images/materi/paper-about-mobile.png" alt="about"
+                    class="object-cover block md:hidden h-[100%]">
 
-                <div class="absolute inset-0 z-10 flex flex-col items-center justify-center md:mx-[9vw] mx-10 gap-1 md:gap-2">
-                    <h1 class="text-white md:text-[clamp(25px,5vw,100px)] md:[text-shadow:0px_5px_0px_#7A3D21] text-[clamp(20px,9vw,100px)] [text-shadow:0px_5px_0px_#7A3D21] [-webkit-text-stroke:1px_#7A3D21] md:[-webkit-text-stroke:1px_#7A3D21]">
-                            YOUR JOURNEY STARTS HERE
+                <div
+                    class="absolute inset-0 z-10 flex flex-col items-center justify-center md:mx-[9vw] mx-10 gap-1 md:gap-2">
+                    <h1
+                        class="text-white md:text-[clamp(25px,5vw,100px)] md:[text-shadow:0px_5px_0px_#7A3D21] text-[clamp(20px,9vw,100px)] [text-shadow:0px_5px_0px_#7A3D21] [-webkit-text-stroke:1px_#7A3D21] md:[-webkit-text-stroke:1px_#7A3D21]">
+                        YOUR JOURNEY STARTS HERE
                     </h1>
-                    <p class="font-['Times_New_Roman',serif] text-[clamp(10px,3vw,80px)] md:text-[clamp(10px,1.5vw,80px)] font-bold text-orange-800 text-justify">
+                    <p
+                        class="font-['Times_New_Roman',serif] text-[clamp(10px,3vw,80px)] md:text-[clamp(10px,1.5vw,80px)] font-bold text-orange-800 text-justify">
                         Di SIMETRI, peserta belajar tiga hal yang menjadi fondasi dunia web modern. HTML dan CSS
                         sebagai bahasa dasar yang membentuk struktur dan tampilan sebuah halaman. Tailwind CSS dan
                         Flowbite sebagai cara yang lebih efisien untuk membangun antarmuka yang rapi dan konsisten.
@@ -171,8 +175,110 @@
             </div>
         </section>
 
-        <section class="relative">
-            <img src="images/materi/bg-section3.svg" alt="hero" class="w-full h-full object-cover">
+        <!-- FAQ Section -->
+        <section class="relative font-['Times_New_Roman',serif]">
+            <img src="images/materi/bg-section3.svg" alt="section3"
+                class="w-full h-[180vw] object-cover object-center md:h-auto">
+            <div class="absolute inset-0 flex flex-col items-center gap-6 p-2 md:p-4 z-[4]">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item mb-4 w-full">
+                    <button
+                        class="faq-button relative z-10 flex w-full items-center justify-between rounded-[20px] border-[8px] border-[#4c1c0e] bg-[#7A3D21] px-6 py-6 text-left">
+                        <span class="text-[24px] text-white ">
+                            Day 1 (10 Okt)
+                        </span>
+                        <span class="flex h-[38px] w-[38px] items-center justify-center rounded-[12px] bg-[#4c1c0e]">
+                            <img src="images/materi/chevron-down.png" alt="chevron"
+                                class="faq-icon transition-transform duration-300">
+                        </span>
+                    </button>
+                    <div class="faq-content -mt-8 pt-2 grid grid-rows-[0fr] transition-all duration-300">
+                        <div class="overflow-hidden ">
+                            <div class="w-full rounded-b-[20px] border-[8px] border-[#7A3D21] bg-[#C07E4E]">
+
+                                <p class="p-4 text-[20px] text-white text-justify">
+                                    Pengenalan & Dasar-Dasar Web Development Peserta akan mengenal SIMETRI, 
+                                    memahami dasar-dasar website, serta mempelajari konsep dan struktur 
+                                    dasar dalam pengembangan web.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item mb-4 w-full">
+                    <button
+                        class="faq-button relative z-10 flex w-full items-center justify-between rounded-[20px] border-[8px] border-[#4c1c0e] bg-[#7A3D21] px-6 py-6 text-left">
+                        <span class="text-[24px] text-white ">
+                            Day 2 (11 Okt)
+                        </span>
+                        <span class="flex h-[38px] w-[38px] items-center justify-center rounded-[12px] bg-[#4c1c0e]">
+                            <img src="images/materi/chevron-down.png" alt="chevron"
+                                class="faq-icon transition-transform duration-300">
+                        </span>
+                    </button>
+                    <div class="faq-content -mt-8 pt-2 grid grid-rows-[0fr] transition-all duration-300">
+                        <div class="overflow-hidden ">
+                            <div class="w-full rounded-b-[20px] border-[8px] border-[#7A3D21] bg-[#C07E4E]">
+
+                                <p class="p-4 text-[20px] text-white text-justify">
+                                    Praktik & Pengembangan Website Peserta mulai menerapkan materi yang 
+                                    telah dipelajari melalui praktik langsung dan mengembangkan bagian awal 
+                                    dari website mereka.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item mb-4 w-full">
+                    <button
+                        class="faq-button relative z-10 flex w-full items-center justify-between rounded-[20px] border-[8px] border-[#4c1c0e] bg-[#7A3D21] px-6 py-6 text-left">
+                        <span class="text-[24px] text-white ">
+                            Day 3 (17 Okt)
+                        </span>
+                        <span class="flex h-[38px] w-[38px] items-center justify-center rounded-[12px] bg-[#4c1c0e]">
+                            <img src="images/materi/chevron-down.png" alt="chevron"
+                                class="faq-icon transition-transform duration-300">
+                        </span>
+                    </button>
+                    <div class="faq-content -mt-8 pt-2 grid grid-rows-[0fr] transition-all duration-300">
+                        <div class="overflow-hidden ">
+                            <div class="w-full rounded-b-[20px] border-[8px] border-[#7A3D21] bg-[#C07E4E]">
+
+                                <p class="p-4 text-[20px] text-white text-justify">
+                                    Pengembangan & Penyempurnaan Website Peserta melanjutkan proses pengembangan website, 
+                                    menerapkan materi lanjutan, serta menyempurnakan tampilan dan fungsi website.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="faq-item mb-4 w-full">
+                    <button
+                        class="faq-button relative z-10 flex w-full items-center justify-between rounded-[20px] border-[8px] border-[#4c1c0e] bg-[#7A3D21] px-6 py-6 text-left">
+                        <span class="text-[24px] text-white ">
+                            Day 4 (18 Okt)
+                        </span>
+                        <span class="flex h-[38px] w-[38px] items-center justify-center rounded-[12px] bg-[#4c1c0e]">
+                            <img src="images/materi/chevron-down.png" alt="chevron"
+                                class="faq-icon transition-transform duration-300">
+                        </span>
+                    </button>
+                    <div class="faq-content -mt-8 pt-2 grid grid-rows-[0fr] transition-all duration-300">
+                        <div class="overflow-hidden ">
+                            <div class="w-full rounded-b-[20px] border-[8px] border-[#7A3D21] bg-[#C07E4E]">
+
+                                <p class="p-4 text-[20px] text-white text-justify">
+                                    Finalisasi & Presentasi Peserta menyelesaikan website yang telah dibuat, melakukan finalisasi, 
+                                    dan menunjukkan hasil pembelajaran selama mengikuti rangkaian SIMETRI.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="relative">
@@ -181,42 +287,77 @@
 
     </main>
 
-    <footer class="relative bg-[url(images/footer/bg-footer.png)] bg-cover h-fit w-auto md:h-[605px] md:w-full h-auto md:px-[90px] md:py-[88px] flex justify-center items-center border-t-[16px] border-[#7A3D21]">
-        <div class="bg-[url(images/footer/frame-footer-mobile.png)] md:bg-[url(images/footer/frame-footer.png)] bg-center bg-contain bg-no-repeat h-[120vw] flex flex-col md:flex-row justify-center items-center gap-[10px] md:px-[148px] md:py-[156px]">
-            <div class="flex flex-col md:flex-row gap-[14px] md:gap-[1vw] md:p-[1vw] items-center justify-center">
-                <div class="flex flex-col gap-[4px] items-center justify-center md:text-[2.5vw] text-[5.5vw]">
-                    <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors md:text-[#C07E4E] md:hover:text-[#F9DCB4] transition-colors" href="">Home</a>
-                    <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors md:text-[#C07E4E] md:hover:text-[#F9DCB4] transition-colors" href="">Tema</a>
-                    <a class="underline underline-offset-4 text-[#F9DCB4] md:text-[#F9DCB4] hover:text-[#F9DCB4] transition-colors md:hover:text-[#F9DCB4] transition-colors" href="">Materi</a>
-                    <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors md:text-[#C07E4E] md:hover:text-[#F9DCB4] transition-colors" href="">Asik</a>
-                </div>
+    
 
-                <div class="gap-[48px] flex flex-col">
-                    <div class="px-[38px] gap-[10.63px] flex flex-col items-center justify-center">
-                        <p class="text-[2vw] md:text-[2.5vw] text-center text-[3vw] text-[#F9DCB4] font-baskerville">Didukung Oleh</p>
-                        <div class="flex flex-row items-center justify-center gap-[16.2px]">
-                            <img class="w-[93.24px] h-[32.31px] md:w-[142.05px] md:h-[49.75px]" src="images/footer/Group 1410136690.png" alt="Logo ITS DSI">
-                            <img class="w-[72.86px] h-[27.57px] md:w-[111px] md:h-[42px]" src="images/footer/Logo SI.png" alt="Logo SI">
-                            <img class="w-[50.3px] h-[26.91px] md:w-[76.64px] md:h-[41px]" src="images/footer/ITS Advancing Humanity SVG.png" alt="Logo ITS Advancing Humanity">
-                            <img class="w-[35.7px] h-[28.62px] md:w-[54.39px] md:h-[43.61px]" src="images/footer/Group 13906.png" alt="Logo HMSI">
+    <script>
+        //Navbar
+        const menuBtn = document.getElementById('menu-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-                        </div>
+        const hamburgerSrc = 'images/navbar/hamburger-menu.svg';
+        const closeSrc = 'images/navbar/x-icon.svg';
 
-                        <div class="flex flex-row items-center justify-center gap-[16.2px]">
-                            <img class="w-[84.27px] h-[25.42px] md:w-[128.39px] md:h-[38.72px]" src="images/footer/Logo Kabinet.png" alt="Logo Kabinet">
-                            <img class="w-[28.51px] h-[31.82px] md:w-[43.43px] md:h-[48.47px]" src="images/footer/Frame 48098812.png" alt="Logo Simetri">
-                            <img class="w-[32.55px] h-[27.58px] md:w-[49.59px] md:h-[42.01px]" src="images/footer/diktisaintek.png" alt="Logo Dikti Saintek">
-                            <img class="w-[56.45px] h-[32.82px] md:w-[86px] md:h-[50px]" src="images/footer/Mask group.png" alt="Logo Diesnatalis ITS">
-                        </div>
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+
+            if (isHidden) {
+                menuIcon.src = hamburgerSrc;
+            } else {
+                menuIcon.src = closeSrc;
+            }
+        });
+
+        // FAQ
+        const faqItems = document.querySelectorAll(".faq-item");
+        
+        faqItems.forEach(function (item) {
+            const button = item.querySelector(".faq-button");
+            const content = item.querySelector(".faq-content");
+            const icon = item.querySelector(".faq-icon");
+
+            button.addEventListener("click", function () {
+                content.classList.toggle("grid-rows-[0fr]");
+                content.classList.toggle("grid-rows-[1fr]");
+                icon.classList.toggle("rotate-180");
+            });
+        });
+        </script>
+    </body>
+
+    <footer class="relative w-full bg-[url(images/footer/bg-footer.png)] bg-cover bg-center flex justify-center items-center border-t-[16px] border-[#7A3D21] px-[4vw] py-[6vw] md:px-[5.5vw] md:py-[5vw]">
+
+        <div class="w-full aspect-[3/4] md:aspect-[2.85/1] bg-[url(images/footer/frame-footer-mobile.png)] md:bg-[url(images/footer/frame-footer.png)] bg-[length:100%_100%] bg-center bg-no-repeat flex flex-col md:flex-row justify-center items-center gap-[4vw] md:gap-[4vw]">
+
+            <div class="flex flex-col gap-[0.5vw] items-center justify-center text-[6vw] md:text-[3vw]">
+                <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors" href="">Home</a>
+                <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors" href="">Tema</a>
+                <a class="underline underline-offset-4 text-[#F9DCB4] transition-colors" href="">Materi</a>
+                <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors" href="">Asik</a>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-[4vw] md:gap-[2vw]">
+                <div class="flex flex-col items-center justify-center gap-[2vw] md:gap-[0.8vw]">
+                    <p class="text-[4vw] md:text-[1.6vw] text-center text-[#F9DCB4] font-baskerville">Didukung Oleh</p>
+
+                    <div class="flex flex-row items-center justify-center gap-[2vw] md:gap-[1vw]">
+                        <img class="w-[22.9vw] md:w-[9.86vw] md:max-w-[9.86vw]" src="images/footer/Group 1410136690.png" alt="Logo ITS DSI">
+                        <img class="w-[16.24vw] md:w-[7.71vw]" src="images/footer/Logo SI.png" alt="Logo SI">
+                        <img class="w-[9.97vw] md:w-[5.32vw]" src="images/footer/ITS Advancing Humanity SVG.png" alt="Logo ITS Advancing Humanity">
+                        <img class="w-[6.92vw] md:w-[3.78vw]" src="images/footer/Group 13906.png" alt="Logo HMSI">
                     </div>
 
-                    <div class="flex items-center justify-center">
-                        <p class="text-[13.13px] font-bold text-[#F9DCB4] font-['Times_New_Roman']">© SIMETRI HMSI ITS</p>
+                    <div class="flex flex-row items-center justify-center gap-[2vw] md:gap-[1vw]">
+                        <img class="w-[18.9vw] md:w-[8.86vw]" src="images/footer/Logo Kabinet.png" alt="Logo Kabinet">
+                        <img class="w-[7.24vw] md:w-[3.71vw]" src="images/footer/Frame 48098812.png" alt="Logo Simetri">
+                        <img class="w-[7.97vw] md:w-[4.32vw]" src="images/footer/diktisaintek.png" alt="Logo Dikti Saintek">
+                        <img class="w-[11.92vw] md:w-[3.78vw]" src="images/footer/Mask group.png" alt="Logo Diesnatalis ITS">
                     </div>
                 </div>
+
+                <p class="text-[3.5vw] md:text-[1.1vw] font-bold text-[#F9DCB4] font-['Times_New_Roman']">© SIMETRI HMSI ITS</p>
             </div>
         </div>
     </footer>
-</body>
 
 </html>
