@@ -12,6 +12,7 @@
                 extend: { 
                     fontFamily: { 
                         zelda: ['"zelda"', 'sans-serif'], 
+                        baskerville: ['"baskerville"', 'sans-serif']
                     } 
                 } 
             } 
@@ -24,10 +25,35 @@
             src: url('./font/zelda.otf') format('opentype'); 
             font-weight: 400; 
             font-style: normal; } 
+        @font-face { 
+            font-family: 'baskerville'; 
+            src: url('./font/baskerville.ttf') format('truetype'); 
+            font-weight: 400; 
+            font-style: normal; } 
     </style>
 </head>
 
 <body class="font-zelda">
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        const hamburgerSrc = 'images/navbar/hamburger-menu.svg';
+        const closeSrc = 'images/navbar/x-icon.svg';
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            
+            if (isHidden) {
+                menuIcon.src = hamburgerSrc;
+            } else {
+                menuIcon.src = closeSrc;
+            }
+        });
+    </script>
+
     <header class="border-b-[6px] border-[#4C1C0E]">
         <nav class="flex items-center justify-between bg-[#7A3D21] px-6 md:px-16 h-[90px]">
             <div class="flex items-center gap-12 lg:gap-16">
@@ -136,24 +162,42 @@
 
     </main>
 
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const menuIcon = document.getElementById('menu-icon');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <footer class="bg-[url(images/footer/bg-footer.png)] bg-cover h-fit w-[390px] md:h-[605px] md:w-full h-auto md:px-[90px] md:py-[88px] flex justify-center items-center border-t-[16px] border-[#7A3D21]">
+        <div class="bg-[url(images/footer/frame-footer-mobile.png)] md:bg-[url(images/footer/frame-footer.png)] bg-center bg-contain bg-no-repeat w-full h-full flex flex-col md:flex-row justify-center items-center gap-[10px] md:px-[148px] md:py-[156px]">
+            <div class="flex flex-col md:flex-row gap-[14px] md:gap-[10px] md:p-[10px] items-center justify-center">
+                <div class="flex flex-col gap-[4px] items-center justify-center text-[24px] md:text-[32px]">
+                    <a class="text-[#F9DCB4] md:text-[#C07E4E]" href="">Home</a>
+                    <a class="text-[#F9DCB4] md:text-[#C07E4E]" href="">Tema</a>
+                    <a class="underline underline-offset-4 text-[#F9DCB4] md:text-[#C07E4E]" href="">Materi</a>
+                    <a class="text-[#F9DCB4] md:text-[#C07E4E]" href="">Asik</a>
+                </div>
 
-        const hamburgerSrc = 'images/navbar/hamburger-menu.svg';
-        const closeSrc = 'images/navbar/x-icon.svg';
+                <div class="gap-[48px] flex flex-col">
+                    <div class="px-[38px] gap-[10.63px] flex flex-col items-center justify-center">
+                        <p class="text-18.38px md:text-[28px] font-normal text-[#F9DCB4] font-baskerville">Didukung Oleh</p>
+                        <div class="flex flex-row items-center justify-center gap-[16.2px]">
+                            <img class="w-[93.24px] h-[32.31px] md:w-[142.05px] md:h-[49.75px]" src="images/footer/Group 1410136690.png" alt="Logo ITS DSI">
+                            <img class="w-[72.86px] h-[27.57px] md:w-[111px] md:h-[42px]" src="images/footer/Logo SI.png" alt="Logo SI">
+                            <img class="w-[50.3px] h-[26.91px] md:w-[76.64px] md:h-[41px]" src="images/footer/ITS Advancing Humanity SVG.png" alt="Logo ITS Advancing Humanity">
+                            <img class="w-[35.7px] h-[28.62px] md:w-[54.39px] md:h-[43.61px]" src="images/footer/Group 13906.png" alt="Logo HMSI">
 
-        menuBtn.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.toggle('hidden');
-            
-            if (isHidden) {
-                menuIcon.src = hamburgerSrc;
-            } else {
-                menuIcon.src = closeSrc;
-            }
-        });
-    </script>
+                        </div>
+
+                        <div class="flex flex-row items-center justify-center gap-[16.2px]">
+                            <img class="w-[84.27px] h-[25.42px] md:w-[128.39px] md:h-[38.72px]" src="images/footer/Logo Kabinet.png" alt="Logo Kabinet">
+                            <img class="w-[28.51px] h-[31.82px] md:w-[43.43px] md:h-[48.47px]" src="images/footer/Frame 48098812.png" alt="Logo Simetri">
+                            <img class="w-[32.55px] h-[27.58px] md:w-[49.59px] md:h-[42.01px]" src="images/footer/diktisaintek.png" alt="Logo Dikti Saintek">
+                            <img class="w-[56.45px] h-[32.82px] md:w-[86px] md:h-[50px]" src="images/footer/Mask group.png" alt="Logo Diesnatalis ITS">
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <p class="text-[13.13px] font-bold text-[#F9DCB4] font-['Times_New_Roman']">© SIMETRI HMSI ITS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
