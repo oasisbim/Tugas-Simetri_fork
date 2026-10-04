@@ -149,12 +149,12 @@
         <section class="relative">
             <div class="overflow-hidden">
                 <img src="images/materi/bg-about.svg" alt="about"
-                    class="md:w-full scale-[210%] md:scale-[100%] my-[150px] md:my-0 object-cover">
+                    class="block w-full h-[185vw] object-cover object-center md:h-auto">
             </div>
             <div class="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 w-[100%]  md:w-[80%]">
                 <img src="images/materi/paper-about.png" alt="about" class="object-cover hidden md:block">
                 <img src="images/materi/paper-about-mobile.png" alt="about"
-                    class="object-cover block md:hidden h-[100%]">
+                    class="object-cover block md:hidden h-[100%] mt-[17vw]">
 
                 <div
                     class="absolute inset-0 z-10 flex flex-col items-center justify-center md:mx-[9vw] mx-10 gap-1 md:gap-2">
@@ -494,58 +494,7 @@
         </section>
     </main>
 
-    <footer
-        class="relative bg-[url(images/footer/bg-footer.png)] bg-cover h-fit w-auto md:h-[605px] md:w-full h-auto md:px-[90px] md:py-[88px] flex justify-center items-center border-t-[16px] border-[#7A3D21]">
-        <div
-            class="bg-[url(images/footer/frame-footer-mobile.png)] md:bg-[url(images/footer/frame-footer.png)] bg-center bg-contain bg-no-repeat h-[120vw] flex flex-col md:flex-row justify-center items-center gap-[10px] md:px-[148px] md:py-[156px]">
-            <div class="flex flex-col md:flex-row gap-[14px] md:gap-[10px] md:p-[10px] items-center justify-center">
-                <div class="flex flex-col gap-[4px] items-center justify-center md:text-[2.5vw] text-[5.5vw]">
-                    <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors md:text-[#C07E4E] md:hover:text-[#F9DCB4] transition-colors"
-                        href="">Home</a>
-                    <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors md:text-[#C07E4E] md:hover:text-[#F9DCB4] transition-colors"
-                        href="">Tema</a>
-                    <a class="underline underline-offset-4 text-[#F9DCB4] md:text-[#F9DCB4] hover:text-[#F9DCB4] transition-colors md:hover:text-[#F9DCB4] transition-colors"
-                        href="">Materi</a>
-                    <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors md:text-[#C07E4E] md:hover:text-[#F9DCB4] transition-colors"
-                        href="">Asik</a>
-                </div>
-
-                <div class="gap-[48px] flex flex-col">
-                    <div class="px-[38px] gap-[10.63px] flex flex-col items-center justify-center">
-                        <p class="text-[2vw] md:text-[2.5vw] text-center text-[3vw] text-[#F9DCB4] font-baskerville">
-                            Didukung Oleh</p>
-                        <div class="flex flex-row items-center justify-center gap-[16.2px]">
-                            <img class="w-[93.24px] h-[32.31px] md:w-[142.05px] md:h-[49.75px]"
-                                src="images/footer/Group 1410136690.png" alt="Logo ITS DSI">
-                            <img class="w-[72.86px] h-[27.57px] md:w-[111px] md:h-[42px]"
-                                src="images/footer/Logo SI.png" alt="Logo SI">
-                            <img class="w-[50.3px] h-[26.91px] md:w-[76.64px] md:h-[41px]"
-                                src="images/footer/ITS Advancing Humanity SVG.png" alt="Logo ITS Advancing Humanity">
-                            <img class="w-[35.7px] h-[28.62px] md:w-[54.39px] md:h-[43.61px]"
-                                src="images/footer/Group 13906.png" alt="Logo HMSI">
-
-                        </div>
-
-                        <div class="flex flex-row items-center justify-center gap-[16.2px]">
-                            <img class="w-[84.27px] h-[25.42px] md:w-[128.39px] md:h-[38.72px]"
-                                src="images/footer/Logo Kabinet.png" alt="Logo Kabinet">
-                            <img class="w-[28.51px] h-[31.82px] md:w-[43.43px] md:h-[48.47px]"
-                                src="images/footer/Frame 48098812.png" alt="Logo Simetri">
-                            <img class="w-[32.55px] h-[27.58px] md:w-[49.59px] md:h-[42.01px]"
-                                src="images/footer/diktisaintek.png" alt="Logo Dikti Saintek">
-                            <img class="w-[56.45px] h-[32.82px] md:w-[86px] md:h-[50px]"
-                                src="images/footer/Mask group.png" alt="Logo Diesnatalis ITS">
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-center">
-                        <p class="text-[13.13px] font-bold text-[#F9DCB4] font-['Times_New_Roman']">© SIMETRI HMSI ITS
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
 
     <script>
         //Navbar
@@ -627,7 +576,43 @@
             goToSlide(currentIndex);
         });
     </script>
+        </script>
+    </body>
 
-</body>
+    <footer class="relative w-full bg-[url(images/footer/bg-footer.png)] bg-cover bg-center flex justify-center items-center border-t-[16px] border-[#7A3D21] px-[4vw] py-[6vw] md:px-[5.5vw] md:py-[5vw]">
+
+        <div class="w-full aspect-[3/4] md:aspect-[2.85/1] bg-[url(images/footer/frame-footer-mobile.png)] md:bg-[url(images/footer/frame-footer.png)] bg-[length:100%_100%] bg-center bg-no-repeat flex flex-col md:flex-row justify-center items-center gap-[4vw] md:gap-[4vw]">
+
+            <div class="flex flex-col gap-[0.5vw] items-center justify-center text-[6vw] md:text-[3vw]">
+                <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors" href="">Home</a>
+                <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors" href="">Tema</a>
+                <a class="underline underline-offset-4 text-[#F9DCB4] transition-colors" href="">Materi</a>
+                <a class="text-[#C07E4E] hover:text-[#F9DCB4] transition-colors" href="">Asik</a>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-[4vw] md:gap-[2vw]">
+                <div class="flex flex-col items-center justify-center gap-[2vw] md:gap-[0.8vw]">
+                    <p class="text-[4vw] md:text-[1.6vw] text-center text-[#F9DCB4] font-baskerville">Didukung Oleh</p>
+
+                    <div class="flex flex-row items-center justify-center gap-[2vw] md:gap-[1vw]">
+                        <img class="w-[22.9vw] md:w-[9.86vw] md:max-w-[9.86vw]" src="images/footer/Group 1410136690.png" alt="Logo ITS DSI">
+                        <img class="w-[16.24vw] md:w-[7.71vw]" src="images/footer/Logo SI.png" alt="Logo SI">
+                        <img class="w-[9.97vw] md:w-[5.32vw]" src="images/footer/ITS Advancing Humanity SVG.png" alt="Logo ITS Advancing Humanity">
+                        <img class="w-[6.92vw] md:w-[3.78vw]" src="images/footer/Group 13906.png" alt="Logo HMSI">
+                    </div>
+
+                    <div class="flex flex-row items-center justify-center gap-[2vw] md:gap-[1vw]">
+                        <img class="w-[18.9vw] md:w-[8.86vw]" src="images/footer/Logo Kabinet.png" alt="Logo Kabinet">
+                        <img class="w-[7.24vw] md:w-[3.71vw]" src="images/footer/Frame 48098812.png" alt="Logo Simetri">
+                        <img class="w-[7.97vw] md:w-[4.32vw]" src="images/footer/diktisaintek.png" alt="Logo Dikti Saintek">
+                        <img class="w-[11.92vw] md:w-[3.78vw]" src="images/footer/Mask group.png" alt="Logo Diesnatalis ITS">
+                    </div>
+                </div>
+
+                <p class="text-[3.5vw] md:text-[1.1vw] font-bold text-[#F9DCB4] font-['Times_New_Roman']">© SIMETRI HMSI ITS</p>
+            </div>
+        </div>
+    </footer>
+
 
 </html>
